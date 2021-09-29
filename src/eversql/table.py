@@ -35,7 +35,6 @@ class Table:
         self._sql: Optional[str] = None
 
     def query_sql(self, exists_ok: bool = True) -> str:
-        """Create the table in the database."""
         if not self.columns:
             raise RuntimeError("Table creation failed: No columns.")
         exists = "IF NOT EXISTS " if exists_ok else ""
