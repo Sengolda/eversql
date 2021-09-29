@@ -12,8 +12,16 @@ Install
 ==============
 .. code:: sh
     
-    # test with bash
+    pip install -U git+https://github.com/Sengolda/eversql
 
 Quick Example
 ==============
-   TODO
+.. code:: py
+    
+    import eversql
+
+    t = eversql.Table()
+    c = eversql.Column("name", "TEXT")
+    t.add_column(c)
+    t.query_sql()
+    print(t) # Prints the query.

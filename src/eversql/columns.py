@@ -16,16 +16,14 @@ Missing: _Missing = _Missing()
 
 
 class Column:
-    def __init__(self, name: str, type, default=Missing):
+    def __init__(self, name: str, type):
         self._name = name
         self.type = type
-        self.alias = None
         self._table = None
-        self._default = default
 
     @property
     def name(self) -> str:
-        return self.alias or self._name
+        return self._name
 
     @property
     def table(self) -> Any:
