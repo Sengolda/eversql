@@ -1,19 +1,6 @@
 from typing import Any
 
 
-class _Missing:
-    def __repr__(self) -> str:
-        return "..."
-
-    def __eq__(self, o: object) -> bool:
-        return False
-
-    def __bool__(self):
-        return True
-
-
-Missing: _Missing = _Missing()
-
 
 class Column:
     def __init__(self, name: str, type):
